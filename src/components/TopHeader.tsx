@@ -3,6 +3,8 @@ import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 
 const TopHeader = () => {
   return (
+      <nav className="absolute top-0 left-0 w-full z-20 ">
+
     <div className='flex justify-between items-center px-6 py-2 text-lg font-playfair text-[rgb(156,108,84)] p-6 '>
       {/* Left-side Nav Links */}
       <div className='flex space-x-4  p-6 '>
@@ -25,6 +27,7 @@ const TopHeader = () => {
         <Youtube  className='cursor-pointer hover:text-white'/></a>
       </div>
     </div>
+     </nav>
   )
 }
 

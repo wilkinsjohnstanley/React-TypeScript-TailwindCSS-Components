@@ -15,7 +15,7 @@ const Marquee = () => {
         {text:"Align with good vibes only"},
     ]
   return (
-    <div className="overflow-hidden whitespace-nowrap py-4">
+    <div className="absolute bottom-0 left-0 w-full z-20 overflow-hidden whitespace-nowrap py-4">
       <div className="inline-flex animate-marquee hover:[animation-play-state:paused]">
         {
             [...Array(2)].map((_, i) => (
