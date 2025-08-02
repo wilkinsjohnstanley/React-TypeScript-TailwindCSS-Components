@@ -135,7 +135,12 @@ const Catalog: React.FC = () => {
         transition={{ duration: 0.6, delay: products.length * 0.2 }}
         viewport={{ once: true }}
       >
-        <button className=" animate-lights border border-white font-playfair px-8 py-3 tracking-wide hover:scale-105 hover:text-black transition hover-animate-glow">
+        <button className=" 
+        animate-lights 
+        border border-white 
+        font-playfair px-8 py-3 
+        tracking-wide 
+        hover:scale-105 hover:text-black transition hover-animate-glow">
           Explore Our Catalog
         </button>
    
