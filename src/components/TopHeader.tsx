@@ -8,9 +8,9 @@ const TopHeader = () => {
     <div className='flex justify-between items-center px-6 py-2 text-lg font-playfair text-[rgb(156,108,84)] p-6 '>
       {/* Left-side Nav Links */}
       <div className='flex space-x-4  p-6 '>
-        <a href="#" className='text-[rgb(156,108,84)] hover:underline hover:text-white'>Explore</a>
-        <a href="#" className='text-[rgb(156,108,84)] hover:underline hover:text-white'>Understand</a>
-        <a href="#" className='text-[rgb(156,108,84)] hover:underline hover:text-white'>Discover</a>
+        <a href="#" className='text-[rgb(156,108,84)]  hover:text-white'>Explore</a>
+        <a href="#" className='text-[rgb(156,108,84)]  hover:text-white'>Understand</a>
+        <a href="#" className='text-[rgb(156,108,84)]  hover:text-white'>Discover</a>
       </div>
       {/* Right-side Social Media Links */}
       <div className='inline-flex flex-items-center justify-between space-x-4'>
