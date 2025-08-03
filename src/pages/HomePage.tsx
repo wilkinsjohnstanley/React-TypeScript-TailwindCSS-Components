@@ -1,15 +1,17 @@
 import Marquee from "../components/Marquee"
-import TopHeader from "../components/TopHeader";
+// import TopHeader from "../components/TopHeader";
 // import BannerImage from "../components/BannerImage";
 import DynamicBanner from "../components/DynamicBanner";
 import Carousel from "../components/Carousel";
 import Catelog from "../components/Catalog";
+import Header from "../components/Header";
 export default function HomePage() {
 
   return (
      <div className="">
    
-      <TopHeader/>
+      {/* <TopHeader/> */}
+      <Header/>
       {/* <DynamicBanner/> */}
       <Carousel/>
       {/* <BannerImage/> */}

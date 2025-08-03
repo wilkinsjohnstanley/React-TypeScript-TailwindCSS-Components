@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, ShoppingBag } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ShoppingCart } from 'lucide-react';
 
 const Carousel = () => {
   // Luxury product carousel data inspired by T|W Tote
@@ -76,7 +76,7 @@ const Carousel = () => {
 
   return (
     <div className=" relative top-0 left-0 w-full h-screen z-10 min-h-screen bg-gradient-to-br from-stone-50 to-stone-100 flex items-center justify-center">
-      <div className="relative w-full max-w-7xl h-[700px]  rounded-2xl shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-7xl h-full  rounded-2xl shadow-2xl overflow-hidden">
         
         {/* Navigation Arrows */}
         <button
@@ -144,7 +144,7 @@ const Carousel = () => {
                       {item.price}
                     </span>
                     <button className="group px-8 py-4  text-black rounded-full hover:bg-stone-900 hover:text-white transition-all duration-300 flex items-center gap-3 font-medium">
-                      <ShoppingBag className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                      <ShoppingCart className="w-5 h-5 group-hover:scale-110 transition-transform" />
                       BOOK NOW
                     </button>
                   </div>
