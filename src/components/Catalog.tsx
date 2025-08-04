@@ -140,7 +140,7 @@ const Catalog: React.FC = () => {
         border border-white 
         font-playfair px-8 py-3 
         tracking-wide 
-        hover:scale-105 hover:text-black transition hover-animate-glow">
+        hover:scale-105 hover:text-white transition hover-animate-glow">
           Explore Our Catalog
         </button>
    

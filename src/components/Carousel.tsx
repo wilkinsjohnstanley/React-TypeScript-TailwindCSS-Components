@@ -75,7 +75,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className=" relative top-0 left-0 w-full h-screen z-10 min-h-screen bg-gradient-to-br from-stone-50 to-stone-100 flex items-center justify-center">
+    <div className=" relative bg-gray-800 top-0 left-0 w-full h-screen z-10 min-h-screen flex items-center justify-center">
       <div className="relative w-full max-w-7xl h-full  rounded-2xl shadow-2xl overflow-hidden">
         
         {/* Navigation Arrows */}
@@ -143,7 +143,7 @@ const Carousel = () => {
                     <span className="text-4xl font-light tracking-wider">
                       {item.price}
                     </span>
-                    <button className="group px-8 py-4  text-black rounded-full hover:bg-stone-900 hover:text-white transition-all duration-300 flex items-center gap-3 font-medium">
+                    <button className="group px-8 py-4  text-white rounded-full hover:bg-stone-900 hover:text-white transition-all duration-300 flex items-center gap-3 font-medium">
                       <ShoppingCart className="w-5 h-5 group-hover:scale-110 transition-transform" />
                       BOOK NOW
                     </button>

@@ -5,6 +5,9 @@ import DynamicBanner from "../components/DynamicBanner";
 import Carousel from "../components/Carousel";
 import Catelog from "../components/Catalog";
 import Header from "../components/Header";
+import FeaturesSection from "../components/FeaturesSection";
+import Footer from "../components/Footer";
+
 export default function HomePage() {
 
   return (
@@ -17,6 +20,8 @@ export default function HomePage() {
       {/* <BannerImage/> */}
       <Marquee/>
       <Catelog/>
+      <FeaturesSection/>
+      <Footer/>
         {/* <h1 className="text-xl font-bold font-playfair text-[rgb(156,108,84)">Component a day challenge</h1> */}
      </div> 
   )
