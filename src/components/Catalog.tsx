@@ -5,6 +5,7 @@ import img1 from "../Images/img1.png";
 import img2 from "../Images/img2.png";
 import img3 from "../Images/img3.png";
 import img4 from "../Images/img4.png";
+import { Link } from "react-router-dom";
 
 type Product = {
   id: number;
@@ -88,24 +89,27 @@ const Catalog: React.FC = () => {
               className="w-full h-72 object-cover transition duration-1000 ease-in-out opacity-25
         hover:opacity-100 cursor-pointer "
             /> */}
-<motion.img
-   src={product.image}
-  alt={product.name}
-  className="w-full h-72 object-cover cursor-pointer"
-  initial={{ opacity: 1 }}                   
-  whileInView={{ opacity: 0.25 }}            
-  transition={{ duration: 1, delay: 1 }}     
-  viewport={{ once: true }}
-  whileHover={{ opacity: 1, transition: { duration: 0.2 } }} 
-/>
+    <Link to={`/product/${product.id}`}>
+
+          <motion.img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-72 object-cover cursor-pointer"
+            initial={{ opacity: 1 }}                   
+            whileInView={{ opacity: 0.25 }}            
+            transition={{ duration: 1, delay: 1 }}     
+            viewport={{ once: true }}
+            whileHover={{ opacity: 1, transition: { duration: 0.2 } }} 
+          /> </Link>
 
             {/* Product Name */}
+            <Link to={`/product/${product.id}`}>
             <p className="mt-4 text-lg md:text-2xl   text-xl md:text-2xl 
   font-playfair font-medium 
   tracking-wide text-center mb-12 
   animate-lights">
               {product.name}
-            </p>
+            </p></Link>
 
             {/* Price */}
             <p className="mt-2 text-sm text-xl md:text-2xl 
@@ -135,6 +139,8 @@ const Catalog: React.FC = () => {
         transition={{ duration: 0.6, delay: products.length * 0.2 }}
         viewport={{ once: true }}
       >
+            <Link to={`/accessories`}>
+
         <button className=" 
         animate-lights 
         border border-white 
@@ -142,7 +148,7 @@ const Catalog: React.FC = () => {
         tracking-wide 
         hover:scale-105 hover:text-white transition hover-animate-glow">
           Explore Our Catalog
-        </button>
+        </button> </Link>
    
 
       </motion.div>

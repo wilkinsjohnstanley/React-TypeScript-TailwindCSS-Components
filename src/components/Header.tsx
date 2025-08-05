@@ -1,6 +1,7 @@
 // src/components/Header.tsx
 import React, { useState } from "react";
 import { Search, ShoppingCart, X, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -10,16 +11,25 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto flex items-center px-6 py-4">
      <div className="flex items-center space-x-10">   
         {/* Logo */}
+        <Link to={`/`}>
         <div className="font-semibold tracking-wider text-lg cursor-pointer animate-lights">
           John's Journey
-        </div>
+        </div> </Link>
 
         {/* Navigation Links */}
         <nav className="hidden md:flex space-x-8 text-sm tracking-widest uppercase ">
+           <Link to={`/clothing`}>
           <a href="#" className="hover:text-gray-300 transition animate-lights">Clothing</a>
+          </Link>
+          <Link to={`/accessories`}>
           <a href="#" className="hover:text-gray-300 transition animate-lights">Accessories</a>
+          </Link>
+          <Link to={`/`}>
           <a href="#" className="hover:text-gray-300 transition animate-lights">About Us</a>
+          </Link>
+          <Link to={`/`}>
           <a href="#" className="hover:text-gray-300 transition animate-lights">Blog</a>
+        </Link>
         </nav>
 </div>
         {/* Right Icons */}

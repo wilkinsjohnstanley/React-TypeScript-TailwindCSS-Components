@@ -1,10 +1,24 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import ProductPage from "./components/ProductPage";
 import HomePage from "./pages/HomePage";
+import SingleProduct from "./pages/SingleProduct";
+import ClothingPage from "./pages/ClothingPage";
+import AccessoriesPage from "./pages/AccessoriesPage";
+import ScrollToTop from "./components/ScrollToTop";
 
-export default function App() {
+const App: React.FC = () => {
   return (
-  
-  <div className="dark min-h-screen bg-gray-900 text-white">
-  <HomePage />
-  </div>
-  )
-}
+    <Router>
+      <ScrollToTop/>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/product/:id" element={<SingleProduct />} />
+         <Route path="/clothing" element={<ClothingPage />} />
+        <Route path="/accessories" element={<AccessoriesPage />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
