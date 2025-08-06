@@ -66,3 +66,6 @@
 .hover-animate-glow:hover {
   animation: pulseGlow 1.5s infinite;
 }
+.animate-glow {
+  animation: pulseGlow 1.5s infinite;
+}

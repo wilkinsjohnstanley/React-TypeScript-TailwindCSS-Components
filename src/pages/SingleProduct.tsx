@@ -8,15 +8,18 @@ import Header from "../components/Header";
 import FeaturesSection from "../components/FeaturesSection";
 import Footer from "../components/Footer";
 import ProductPage from "../components/ProductPage";
+import mountain3 from "../Images/mountain3.jpeg"
 export default function HomePage() {
 
   return (
      <div className="">
-   
+        {/* <div className="sticky top-0 z-50">
+  <Marquee />
+</div> */}
+
       {/* <TopHeader/> */}
       <Header/>
       
-      {/* <Marquee/> */}
 <ProductPage/>
       {/* <Catelog/> */}
       <FeaturesSection/>
