@@ -24,7 +24,7 @@ const products: Product[] = Array.from({ length: 27 }, (_, i) => ({
 
 const ITEMS_PER_PAGE = 9;
 
-const Accessories: React.FC = () => {
+const AllProducts: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = Math.ceil(products.length / ITEMS_PER_PAGE);
@@ -46,7 +46,7 @@ const Accessories: React.FC = () => {
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
   >
-    Discover Unique Accessories
+    Discover Unique All Products
   </motion.h2>
 
   <p className="relative text-center text-lg md:text-xl animate-lights mb-12">
@@ -151,4 +151,4 @@ const Accessories: React.FC = () => {
   );
 };
 
-export default Accessories;
+export default AllProducts;

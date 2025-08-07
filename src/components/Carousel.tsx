@@ -1,35 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ShoppingCart } from 'lucide-react';
-
+import { Link } from 'react-router-dom';
 const Carousel = () => {
   // Luxury product carousel data inspired by T|W Tote
   const data = [
     {
       src: "https://images.pexels.com/photos/8359846/pexels-photo-8359846.jpeg",
       alt: "Mountain 1",
-      title: "ROCKY MOUNTAIN WEEKENDER",
-      subtitle: "Where Fashionistas Meet The Backlit Mountains for one transformational weekend away",
-      description: "",
-      price: "$285",
-      badge: "POPULAR"
+      title: "THE BEST OF THE UNIVERSE",
+      subtitle: "Simply amazing how you realize that you have always been as you are",
+      description: "The universe is working behind the scenes in ways you can't comprehend to help you align.",
+      price: "",
+      badge: ""
     },
     {
       src: "https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg",
       alt: "Mountain 2",
-      title: "SNOWY DELICATE OVERNIGHTER",
-      subtitle: "An Ethereal Experience of Winter Whimsy",
-      description: "",
-      price: "$95",
-      badge: "NEW"
+      title: "THE VERY BEST THE UNIVERSE HAS TO OFFER",
+      subtitle: "Somewhere deep down you feel it is as you always knew it could be.",
+      description: "We cultivate the spectacular",
+      price: "",
+      badge: ""
     },
     {
       src: "https://images.pexels.com/photos/18847593/pexels-photo-18847593.jpeg",
       alt: "Mountain 3",
-      title: "STARGAZERS' STOWAWAY RETREAT",
-      subtitle: "Stargazing experience",
-      description: "Stow away with us for a retreat under the centuries old starlight",
-      price: "$125",
-      badge: "5.0 ★★★★★"
+      title: "THE BEST OF THE UNIVERSE",
+      subtitle: "Have you ever noticed that the way you felt overcome all the doubts you had before?",
+      description: "Allow yourself to give in to the beauty of the universe",
+      price: "",
+      // badge: "5.0 ★★★★★"
     }
   ];
 
@@ -143,10 +143,21 @@ const Carousel = () => {
                     <span className="text-4xl font-light tracking-wider">
                       {item.price}
                     </span>
-                    <button className="group px-8 py-4  text-white rounded-full hover:bg-stone-900 hover:text-white transition-all duration-300 flex items-center gap-3 font-medium">
+                                      
+                    {/* <button className=" 
+        p-3
+       bg-blue-600 text-white rounded hover:bg-blue-700 hover-animate-glow hover:scale-105 transition-colors font-medium text-sm animate-lights animate-glow">
                       <ShoppingCart className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                      BOOK NOW
-                    </button>
+                      <Link to={`/browse`}> Browse only the best</Link>
+                    </button>  */}
+             <Link to={`/browse`}>
+  <button className="group px-6 py-4 bg-blue-600 text-white rounded-sm justify-center hover:bg-blue-700 hover-animate-glow hover:scale-105 transition-colors font-semibold text-sm tracking-wide uppercase animate-lights animate-glow flex items-center gap-2">
+    <ShoppingCart />
+    DISCOVER SOMETHING NEW
+  </button>
+</Link>
+
+                    
                   </div>
                 </div>
               </div>
@@ -172,7 +183,7 @@ const Carousel = () => {
         {/* Brand Watermark */}
         {/* <div className="absolute top-8 left-8 z-30">
           <div className="text-white/80 font-light tracking-[0.3em] text-sm">
-            John's Journey
+            Best of the Universe
           </div>
         </div> */}
 

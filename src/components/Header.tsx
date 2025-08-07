@@ -7,23 +7,26 @@ const Header: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
-    <header className="w-full  text-white fixed top-0 left-0 z-50 hover:bg-gray-900">
+    <header className="w-full  text-white fixed top-0 left-0 z-50 hover:bg-gray-800">
       <div className="max-w-7xl mx-auto flex items-center px-6 py-4">
      <div className="flex items-center space-x-10">   
         {/* Logo */}
         <Link to={`/`}>
         <div className="font-semibold tracking-wider text-lg cursor-pointer animate-lights">
-          John's Journey
+          Best of the Universe
         </div> </Link>
 
         {/* Navigation Links */}
         <nav className="hidden md:flex space-x-8 text-sm tracking-widest uppercase ">
-           <Link to={`/clothing`}>
+          <Link to={`/browse`}>
+          <a href="#" className="hover:text-gray-300 transition animate-lights">Browse</a>
+          </Link>
+           {/* <Link to={`/clothing`}>
           <a href="#" className="hover:text-gray-300 transition animate-lights">Clothing</a>
           </Link>
           <Link to={`/accessories`}>
           <a href="#" className="hover:text-gray-300 transition animate-lights">Accessories</a>
-          </Link>
+          </Link> */}
           <Link to={`/`}>
           <a href="#" className="hover:text-gray-300 transition animate-lights">About Us</a>
           </Link>

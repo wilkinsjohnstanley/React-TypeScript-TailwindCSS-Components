@@ -1,44 +1,7 @@
 import React, { useState } from 'react';
 import { Star, ChevronLeft, ChevronRight, Minus, Plus } from 'lucide-react';
 import darkstars from "../Images/darkstars.jpg"
-const data = [
-  {
-    src: "https://images.pexels.com/photos/8359846/pexels-photo-8359846.jpeg",
-    alt: "Mountain 1",
-    title: "ROCKY MOUNTAIN WEEKENDER",
-    subtitle: "Where Fashionistas Meet The Backlit Mountains for one transformational weekend away",
-    description: "",
-    price: "$285",
-    badge: "POPULAR"
-  },
-  {
-    src: "https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg",
-    alt: "Mountain 2",
-    title: "SNOWY DELICATE OVERNIGHTER",
-    subtitle: "An Ethereal Experience of Winter Whimsy",
-    description: "",
-    price: "$95",
-    badge: "NEW"
-  },
-  {
-    src: "https://images.pexels.com/photos/18847593/pexels-photo-18847593.jpeg",
-    alt: "Mountain 3",
-    title: "STARGAZERS' STOWAWAY RETREAT",
-    subtitle: "Stargazing experience",
-    description: "Stow away with us for a retreat under the centuries old starlight",
-    price: "$125",
-    badge: "5.0 ★★★★★"
-  },
-    {
-    src: darkstars,
-    alt: "Mountain 4",
-    title: "STARGAZERS' STOWAWAY RETREAT",
-    subtitle: "Stargazing experience",
-    description: "Stow away with us for a retreat under the centuries old starlight",
-    price: "$125",
-    badge: "5.0 ★★★★★"
-  }
-];
+
 
 interface ProductImage {
   id: string;
@@ -114,7 +77,7 @@ const ProductPage: React.FC = () => {
       {/* Background Layer with Hue Rotate */}
       <div 
         className="absolute inset-0 bg-cover bg-center filter hue-rotate-90"
-        style={{ backgroundImage: `url(${data[3].src})` }}
+        style={{ backgroundImage: `url(${darkstars})` }}
       />
 
       {/* Foreground Content */}

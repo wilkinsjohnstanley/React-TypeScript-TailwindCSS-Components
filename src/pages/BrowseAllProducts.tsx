@@ -9,6 +9,8 @@ import FeaturesSection from "../components/FeaturesSection";
 import Footer from "../components/Footer";
 import ProductPage from "../components/ProductPage";
 import Accessories from "../components/Accessories";
+import Clothing from "../components/Clothing";
+import AllProducts from "../components/AllProducts";
 export default function HomePage() {
 
   return (
@@ -18,8 +20,8 @@ export default function HomePage() {
       <Header/>
       
       {/* <Marquee/> */}
-        <Accessories/>
-      {/* <Catelog/> */}
+        <AllProducts/>
+      <Catelog/>
       <FeaturesSection/>
       <Footer/>
         {/* <h1 className="text-xl font-bold font-playfair text-[rgb(156,108,84)">Component a day challenge</h1> */}

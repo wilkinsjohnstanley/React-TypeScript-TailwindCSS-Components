@@ -127,7 +127,7 @@ const Footer: React.FC = () => {
           {/* Copyright */}
           <div className="text-center">
             <p className="text-sm text-gray-400">
-              © 2025 · JOHN'S JOURNEY
+              © 2025 · Best of the Universe
             </p>
           </div>
 

@@ -6,6 +6,7 @@ import img2 from "../Images/img2.png";
 import img3 from "../Images/img3.png";
 import img4 from "../Images/img4.png";
 import { Link } from "react-router-dom";
+import darkstars from "../Images/darkstars.jpg";
 
 type Product = {
   id: number;
@@ -51,7 +52,14 @@ const products: Product[] = [
 
 const Catalog: React.FC = () => {
   return (
+      <div className="relative min-h-screen">
+      {/* Background Layer with Hue Rotate */} 
+
     <div className="bg-gray-900 text-white font-playfair text-lg font-medium py-16">
+            <div 
+        className="absolute inset-0 bg-cover bg-center filter hue-rotate-90"
+        style={{ backgroundImage: `url(${darkstars})` }}
+      />
       {/* Title */}
       {/* <h2 className="text-xl md:text-2xl text-[rgb(156,108,84)] hover:text-white font-playfair text-lg font-medium tracking-wide text-center mb-12">
         Let the universe spoil you.
@@ -142,16 +150,14 @@ const Catalog: React.FC = () => {
             <Link to={`/accessories`}>
 
         <button className=" 
-        animate-lights 
-        border border-white 
-        font-playfair px-8 py-3 
-        tracking-wide 
-        hover:scale-105 hover:text-white transition hover-animate-glow">
+        relative font-serif
+        w-full bg-blue-600 text-white py-2.5 px-4 rounded hover:bg-blue-700 hover-animate-glow hover:scale-105 transition-colors font-medium text-sm animate-lights animate-glow">
           Explore Our Catalog
         </button> </Link>
    
 
       </motion.div>
+    </div>
     </div>
   );
 };
