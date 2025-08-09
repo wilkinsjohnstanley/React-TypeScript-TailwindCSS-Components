@@ -46,11 +46,10 @@ const AllProducts: React.FC = () => {
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
   >
-    Discover Unique All Products
+    Explore the infinite
   </motion.h2>
 
   <p className="relative text-center text-lg md:text-xl animate-lights mb-12">
-    From elegant bags to handcrafted jewelry, find your perfect finishing touch.
   </p>
 
   {/* Product Grid */}
@@ -68,7 +67,7 @@ const AllProducts: React.FC = () => {
             Sold Out
           </span>
         )}
-
+{/* 
         <Link to={`/product/${product.id}`}>
           <motion.img
             src={product.image}
@@ -79,8 +78,19 @@ const AllProducts: React.FC = () => {
             transition={{ duration: 0 }}
             whileHover={{ opacity: 1, scale: 1.05, transition: { duration: 0.2 } }}
           />
-        </Link>
+        </Link> */}
+    <Link to={`/product/${product.id}`}>
 
+          <motion.img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-72 object-cover cursor-pointer"
+            initial={{ opacity: 1 }}                   
+            whileInView={{ opacity: 0.25 }}            
+            transition={{ duration: 1, delay: 1 }}     
+            viewport={{ once: true }}
+            whileHover={{ opacity: 1, transition: { duration: 0.2 } }} 
+          /> </Link>
         <Link to={`/product/${product.id}`}>
           <p className="mt-4 text-lg md:text-2xl font-playfair font-medium tracking-wide text-center animate-lights">
             {product.name}
@@ -94,6 +104,9 @@ const AllProducts: React.FC = () => {
         <div className="flex justify-center items-center mt-1 text-xl font-playfair font-medium tracking-wide text-center animate-lights">
           {"★".repeat(5)}
         </div>
+        <div>  <button className="relative w-full bg-transparent border border-gray-600 text-white py-2.5 px-4 rounded hover-animate-glow hover:scale-105 transition-all font-medium text-sm animate-lights">
+                ADD TO CART
+              </button></div>
       </motion.div>
     ))}
   </div>

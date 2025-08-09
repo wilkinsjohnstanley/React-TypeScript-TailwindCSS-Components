@@ -18,8 +18,7 @@ export default function HomePage() {
    
       {/* <TopHeader/> */}
       <Header/>
-      
-      {/* <Marquee/> */}
+      <Marquee/>
         <AllProducts/>
       <Catelog/>
       <FeaturesSection/>

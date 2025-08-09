@@ -7,6 +7,8 @@ import img3 from "../Images/img3.png";
 import img4 from "../Images/img4.png";
 import { Link } from "react-router-dom";
 import darkstars from "../Images/darkstars.jpg";
+import { ShoppingCart } from "lucide-react";
+// import AddToCartButton from "./AddToCartButton";
 
 type Product = {
   id: number;
@@ -74,7 +76,11 @@ const Catalog: React.FC = () => {
 </h2>
       {/* Product Grid */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 px-4">
+       
         {products.map((product, index) => (
+
+
+
           <motion.div
             key={product.id}
             className="relative text-center"
@@ -131,14 +137,20 @@ const Catalog: React.FC = () => {
   tracking-wide text-center mb-12 
   animate-lights">
               {"★".repeat(5)}
-              {/* <span className="ml-2 text-white text-sm">
-                ({product.rating.toFixed(1)})
-              </span> */}
+            
             </div>
-          </motion.div>
-        ))}
-      </div>
+            <div>  <button className="relative w-full bg-transparent border border-gray-600 text-white py-2.5 px-4 rounded hover-animate-glow hover:scale-105 transition-all font-medium text-sm animate-lights">
+                ADD TO CART
+              </button></div>
 
+          </motion.div>
+          
+
+        ))}
+      
+      </div>
+         
+                    
       {/* Explore Button */}
       <motion.div
         className="flex justify-center"
@@ -147,11 +159,11 @@ const Catalog: React.FC = () => {
         transition={{ duration: 0.6, delay: products.length * 0.2 }}
         viewport={{ once: true }}
       >
-            <Link to={`/accessories`}>
+            <Link to={`/browse`}>
 
         <button className=" 
         relative font-serif
-        w-full bg-blue-600 text-white py-2.5 px-4 rounded hover:bg-blue-700 hover-animate-glow hover:scale-105 transition-colors font-medium text-sm animate-lights animate-glow">
+        w-full bg-blue-400 text-white py-2.5 px-4 rounded hover:bg-blue-500 hover-animate-glow hover:scale-105 transition-colors font-medium text-sm animate-lights animate-glow">
           Explore Our Catalog
         </button> </Link>
    

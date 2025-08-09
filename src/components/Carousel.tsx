@@ -7,8 +7,8 @@ const Carousel = () => {
     {
       src: "https://images.pexels.com/photos/8359846/pexels-photo-8359846.jpeg",
       alt: "Mountain 1",
-      title: "THE BEST OF THE UNIVERSE",
-      subtitle: "Simply amazing how you realize that you have always been as you are",
+      title: "",
+      subtitle: "",
       description: "The universe is working behind the scenes in ways you can't comprehend to help you align.",
       price: "",
       badge: ""
@@ -16,8 +16,8 @@ const Carousel = () => {
     {
       src: "https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg",
       alt: "Mountain 2",
-      title: "THE VERY BEST THE UNIVERSE HAS TO OFFER",
-      subtitle: "Somewhere deep down you feel it is as you always knew it could be.",
+      title: "",
+      subtitle: "",
       description: "We cultivate the spectacular",
       price: "",
       badge: ""
@@ -25,13 +25,14 @@ const Carousel = () => {
     {
       src: "https://images.pexels.com/photos/18847593/pexels-photo-18847593.jpeg",
       alt: "Mountain 3",
-      title: "THE BEST OF THE UNIVERSE",
-      subtitle: "Have you ever noticed that the way you felt overcome all the doubts you had before?",
+      title: "",
+      subtitle: "",
       description: "Allow yourself to give in to the beauty of the universe",
       price: "",
       // badge: "5.0 ★★★★★"
     }
   ];
+  
 
   const [slide, setSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -75,9 +76,10 @@ const Carousel = () => {
   };
 
   return (
-    <div className=" relative bg-gray-800 top-0 left-0 w-full h-screen z-10 min-h-screen flex items-center justify-center">
+<div className="relative bg-gray-800 w-full h-[calc(100vh-15rem)] z-10 flex items-center justify-center">
       <div className="relative w-full max-w-7xl h-full  rounded-2xl shadow-2xl overflow-hidden">
-        
+
+      
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
@@ -113,54 +115,49 @@ const Carousel = () => {
               </div>
 
               {/* Content Overlay */}
-              <div className="relative z-10 h-full flex items-center">
-                <div className="w-full max-w-2xl ml-12 md:ml-20 text-white">
-                  
-                  {/* Badge */}
-                  <div className="inline-block mb-4">
-                    <span className="px-4 py-2 /20 backdrop-blur-sm rounded-full text-sm font-medium tracking-wide">
-                      {item.badge}
-                    </span>
-                  </div>
+<div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+  <div className="w-full max-w-2xl text-white">
+    
+    {/* Badge */}
+    <div className="inline-block mb-4">
+      <span className="px-4 py-2 /20 backdrop-blur-sm rounded-full text-sm font-medium tracking-wide">
+        {item.badge}
+      </span>
+    </div>
 
-                  {/* Title */}
-                  <h1 className="text-5xl md:text-7xl font-light tracking-wider mb-4 leading-tight">
-                    {item.title}
-                  </h1>
+  
 
-                  {/* Subtitle */}
-                  <p className="text-xl md:text-2xl font-light text-stone-200 mb-6 tracking-wide">
-                    {item.subtitle}
-                  </p>
 
-                  {/* Description */}
-                  <p className="text-lg text-stone-300 mb-8 max-w-xl leading-relaxed">
-                    {item.description}
-                  </p>
+    {/* Subtitle */}
+    <p className="uppercase tracking-widest text-sm font-light mb-3">
+      {item.subtitle}
+    </p>
+      {/* Title */}
+    <h1 className="text-3xl md:text-5xl font-medium tracking-wide leading-snug mb-6">
+      {item.title}
+    </h1>
 
-                  {/* Price and CTA */}
-                  <div className="flex items-center gap-8">
-                    <span className="text-4xl font-light tracking-wider">
-                      {item.price}
-                    </span>
-                                      
-                    {/* <button className=" 
-        p-3
-       bg-blue-600 text-white rounded hover:bg-blue-700 hover-animate-glow hover:scale-105 transition-colors font-medium text-sm animate-lights animate-glow">
-                      <ShoppingCart className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                      <Link to={`/browse`}> Browse only the best</Link>
-                    </button>  */}
-             <Link to={`/browse`}>
-  <button className="group px-6 py-4 bg-blue-600 text-white rounded-sm justify-center hover:bg-blue-700 hover-animate-glow hover:scale-105 transition-colors font-semibold text-sm tracking-wide uppercase animate-lights animate-glow flex items-center gap-2">
-    <ShoppingCart />
-    DISCOVER SOMETHING NEW
-  </button>
-</Link>
+    {/* Description
+    <p className="text-lg text-stone-300 mb-8 max-w-xl leading-relaxed mx-auto">
+      {item.description}
+    </p> */}
 
-                    
-                  </div>
-                </div>
-              </div>
+    {/* Price and CTA */}
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+      <span className="text-4xl font-light tracking-wider">
+        {item.price}
+      </span>
+
+      <Link to={`/browse`}>
+        <button className="group px-8 py-3 uppercase tracking-wide text-sm font-medium bg-blue-400 text-white rounded-sm justify-center hover:bg-blue-500 hover-animate-glow hover:scale-105 transition-colors font-semibold text-sm tracking-wide uppercase animate-lights animate-glow flex items-center gap-2">
+          <ShoppingCart />
+          DISCOVER SOMETHING NEW
+        </button>
+      </Link>
+    </div>
+  </div>
+</div>
+
             </div>
           ))}
         </div>
@@ -183,7 +180,7 @@ const Carousel = () => {
         {/* Brand Watermark */}
         {/* <div className="absolute top-8 left-8 z-30">
           <div className="text-white/80 font-light tracking-[0.3em] text-sm">
-            Best of the Universe
+            
           </div>
         </div> */}
 
